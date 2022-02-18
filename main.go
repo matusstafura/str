@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"strhelpers/str"
+
+	"github.com/matusstafura/string-helpers/str"
 )
 
 func main() {

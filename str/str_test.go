@@ -1,8 +1,9 @@
 package str_test
 
 import (
-	"strhelpers/str"
 	"testing"
+
+	str "github.com/matusstafura/string-helpers"
 )
 
 func TestLower(t *testing.T) {
