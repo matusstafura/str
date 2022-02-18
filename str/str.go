@@ -5,11 +5,7 @@ import (
 )
 
 func Limit(s string, n int) string {
-	var f string
-	for i:=0; i<n; i++ {
-		f += string(s[i])
-	}
-	return f
+	return s[0:n]
 }
 
 func Lower(s string) string {
