@@ -13,3 +13,12 @@ func TestLower(t *testing.T) {
 		t.Fatalf("got %q, wanted %q", got, want)
 	}
 }
+
+func TestLimit(t *testing.T) {
+	got := str.Limit("Pack my box with five dozen liquor jugs.", 10)
+	want := "Pack my bo"
+
+	if got != want {
+		t.Fatalf("got %q, wanted %q", got, want)
+	}
+}
