@@ -7,7 +7,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/matusstafura/string-helpers/str"
+	"github.com/matusstafura/str"
 )
 
 func main() {
@@ -17,7 +17,7 @@ func main() {
 	limit := str.Limit("This is a string!", 6)
 	fmt.Println(limit) // This i
 
-    reverse := str.Reverse("Never give up")
+	reverse := str.Reverse("Never give up")
 	fmt.Println(reverse) // pu evig reveN
 }
 ```
@@ -25,7 +25,7 @@ func main() {
 ## Tests
 
 ```bash
-go test str/str_test.go -v
+go test str_test.go -v
 ```
 
 ## Contributions
