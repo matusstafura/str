@@ -23,3 +23,12 @@ func TestLimit(t *testing.T) {
 		t.Fatalf("got %q, wanted %q", got, want)
 	}
 }
+
+func TestReverse(t *testing.T) {
+	got := str.Reverse("Never give up")
+	want := "pu evig reveN"
+
+	if got != want {
+		t.Fatalf("got %q, wanted %q", got, want)
+	}
+}

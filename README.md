@@ -16,6 +16,9 @@ func main() {
 
 	limit := str.Limit("This is a string!", 6)
 	fmt.Println(limit) // This i
+
+    reverse := str.Reverse("Never give up")
+	fmt.Println(reverse) // pu evig reveN
 }
 ```
 
