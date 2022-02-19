@@ -1,3 +1,3 @@
-module github.com/matusstafura/string-helpers
+module github.com/matusstafura/str
 
 go 1.17

@@ -3,7 +3,7 @@ package str_test
 import (
 	"testing"
 
-	str "github.com/matusstafura/string-helpers/str"
+	"github.com/matusstafura/str"
 )
 
 func TestLower(t *testing.T) {
