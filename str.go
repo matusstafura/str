@@ -4,6 +4,10 @@ import (
 	"strings"
 )
 
+func Length(s string) int {
+	return len(s)
+}
+
 func Limit(s string, n int) string {
 	return s[0:n]
 }

@@ -19,6 +19,9 @@ func main() {
 
 	reverse := str.Reverse("Never give up")
 	fmt.Println(reverse) // pu evig reveN
+
+	reverse := str.Length("Acta non verba.")
+	fmt.Println(reverse) // 15
 }
 ```
 
