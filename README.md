@@ -11,8 +11,11 @@ import (
 )
 
 func main() {
-	lower := str.Lower("KATE")
-	fmt.Println(lower) // kate
+	append := str.Append("Matus", " Stafura")
+	fmt.Println(append) // 'Matus Stafura'
+
+	lower := str.Lower("JANUARY")
+	fmt.Println(lower) // january
 
 	limit := str.Limit("This is a string!", 6)
 	fmt.Println(limit) // This i
@@ -20,8 +23,8 @@ func main() {
 	reverse := str.Reverse("Never give up")
 	fmt.Println(reverse) // pu evig reveN
 
-	reverse := str.Length("Acta non verba.")
-	fmt.Println(reverse) // 15
+	length := str.Length("Acta non verba.")
+	fmt.Println(length) // 15
 }
 ```
 

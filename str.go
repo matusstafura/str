@@ -4,6 +4,10 @@ import (
 	"strings"
 )
 
+func Append(s ... string) string {
+	return strings.Join(s,"")
+}
+
 func Length(s string) int {
 	return len(s)
 }

@@ -6,12 +6,13 @@ import (
 	"github.com/matusstafura/str"
 )
 
-var tests = []struct {
-	given string
-	wanted string
-} {
-	{"UPPER", "upper"},
-	{"TEST", "test"},
+func TestAppend(t *testing.T) {
+	got := str.Append("Matus"," Stafura")
+	want := "Matus Stafura"
+
+	if got != want {
+		t.Fatalf("got %q, wanted %q", got, want)
+	}
 }
 
 func TestLength(t *testing.T) {
@@ -24,13 +25,11 @@ func TestLength(t *testing.T) {
 }
 
 func TestLower(t *testing.T) {
-	for _, tt := range tests {
-		t.Run(tt.given, func(t *testing.T) {
-			give := str.Lower(tt.given)
-			if give != tt.wanted {
-				t.Fatalf("got %q, wanted %q", tt.given, tt.wanted)
-			}
-		})
+	got := str.Lower("JANUARY")
+	want := "january"
+
+	if got != want {
+		t.Fatalf("got %q, wanted %q", got, want)
 	}
 }
 
