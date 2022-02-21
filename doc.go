@@ -1,9 +1,7 @@
+/*
 # String Helpers for Go Lang
 
 ## Usage
-
-```go
-package main
 
 import (
 	"fmt"
@@ -29,18 +27,19 @@ func main() {
 	reverse := str.Reverse("Never give up")
 	fmt.Println(reverse) // pu evig reveN
 }
-```
 
 ## Tests
 
-```bash
 go test str_test.go -v
-```
 
 ## Contributions
 
-Contributions are welcome and will be fully credited.
+Contributions are welcome and will be fully credited at https://github.com/matusstafura/str
 
 ## License
 
 This project is open-sourced software licensed under the MIT license.
+*/
+
+package str
+
