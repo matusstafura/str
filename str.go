@@ -4,12 +4,12 @@ import (
 	"strings"
 )
 
-func Append(s ... string) string {
-	return strings.Join(s,"")
+func Append(s ...string) string {
+	return strings.Join(s, "")
 }
 
 func Before(s, c string) string {
-	ma := strings.Split(s,c)
+	ma := strings.Split(s, c)
 	return string(ma[0])
 }
 
@@ -26,8 +26,8 @@ func Lower(s string) string {
 }
 
 func Reverse(s string) string {
-	f := make([]string,len(s))
-	
+	f := make([]string, len(s))
+
 	for i, c := range s {
 		f[len(s)-1-i] = string(c)
 	}

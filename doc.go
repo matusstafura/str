@@ -42,4 +42,3 @@ This project is open-sourced software licensed under the MIT license.
 */
 
 package str
-

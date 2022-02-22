@@ -7,7 +7,7 @@ import (
 )
 
 func TestAppend(t *testing.T) {
-	got := str.Append("Matus"," Stafura")
+	got := str.Append("Matus", " Stafura")
 	want := "Matus Stafura"
 
 	if got != want {
@@ -16,8 +16,8 @@ func TestAppend(t *testing.T) {
 }
 
 func TestBefore(t *testing.T) {
-	got := str.Before("Do not let the behavior of others destroy your inner peace. - Dalai Lama"," -")
-	want := "Do not let the behavior of others destroy your inner peace." 
+	got := str.Before("Do not let the behavior of others destroy your inner peace. - Dalai Lama", " -")
+	want := "Do not let the behavior of others destroy your inner peace."
 
 	if got != want {
 		t.Fatalf("got %q, wanted %q", got, want)
