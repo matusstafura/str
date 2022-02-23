@@ -33,3 +33,7 @@ func Reverse(s string) string {
 	}
 	return strings.Join(f, "")
 }
+
+func Upper(s string) string {
+	return strings.ToUpper(s)
+}

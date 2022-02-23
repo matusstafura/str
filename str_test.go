@@ -59,3 +59,12 @@ func TestReverse(t *testing.T) {
 		t.Fatalf("got %q, wanted %q", got, want)
 	}
 }
+
+func TestUpper(t *testing.T) {
+	got := str.Upper("Be the friend you wish you had.")
+	want := "BE THE FRIEND YOU WISH YOU HAD."
+
+	if got != want {
+		t.Fatalf("got %q, wanted %q", got, want)
+	}
+}
