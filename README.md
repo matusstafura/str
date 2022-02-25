@@ -11,6 +11,10 @@ import (
 )
 
 func main() {
+	// str.After() returns everything after first occurence
+	after := str.After("Do not let the behavior of others destroy your inner peace. - Dalai Lama","- ")
+	fmt.Println(after) // 'Dalai Lama'
+
 	// str.Append(...) concatenates strings
 	append := str.Append("Matus", " Stafura")
 	fmt.Println(append) // 'Matus Stafura'

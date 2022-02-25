@@ -9,6 +9,10 @@ import (
 )
 
 func main() {
+	// str.After() returns everything after first occurence
+	after := str.After("Do not let the behavior of others destroy your inner peace. - Dalai Lama","- ")
+	fmt.Println(after) // 'Dalai Lama'
+
 	// str.Append(...) concatenates strings
 	append := str.Append("Matus", " Stafura")
 	fmt.Println(append) // 'Matus Stafura'
@@ -33,7 +37,7 @@ func main() {
 	reverse := str.Reverse("Never give up")
 	fmt.Println(reverse) // pu evig reveN
 
-	// str.Upper() converts the string to lowercase
+	// str.Upper() converts the string to uppercase
 	upper := str.Upper("Be the friend you wish you had.")
 	fmt.Println(upper) // BE THE FRIEND YOU WISH YOU HAD.
 }

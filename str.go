@@ -4,13 +4,18 @@ import (
 	"strings"
 )
 
+func After(s, c string) string {
+	r := strings.Split(s, c)
+	return string(r[1])
+}
+
 func Append(s ...string) string {
 	return strings.Join(s, "")
 }
 
 func Before(s, c string) string {
-	ma := strings.Split(s, c)
-	return string(ma[0])
+	r := strings.Split(s, c)
+	return string(r[0])
 }
 
 func Length(s string) int {

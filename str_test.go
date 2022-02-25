@@ -6,6 +6,15 @@ import (
 	"github.com/matusstafura/str"
 )
 
+func TestAfter(t *testing.T) {
+	got := str.After("Do not let the behavior of others destroy your inner peace. - Dalai Lama", "- ")
+	want := "Dalai Lama"
+
+	if got != want {
+		t.Fatalf("got %q, wanted %q", got, want)
+	}
+}
+
 func TestAppend(t *testing.T) {
 	got := str.Append("Matus", " Stafura")
 	want := "Matus Stafura"
