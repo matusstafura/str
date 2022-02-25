@@ -1,6 +1,7 @@
 package str
 
 import (
+	"regexp"
 	"strings"
 )
 
@@ -16,6 +17,17 @@ func Append(s ...string) string {
 func Before(s, c string) string {
 	r := strings.Split(s, c)
 	return string(r[0])
+}
+
+func Mask(s string, n int, r string) string {
+	l := len(s)
+	x := s[n:l]
+	re := regexp.MustCompile(`.`)
+
+	before := Limit(s, n)
+	after := re.ReplaceAllString(x, r)
+
+	return (before + after)
 }
 
 func Length(s string) int {

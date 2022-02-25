@@ -33,6 +33,10 @@ func main() {
 	limit := str.Limit("This is a string!", 6)
 	fmt.Println(limit) // This i
 
+	// str.Mask() converts the string to lowercase
+	mask := str.Mask("4242 4242 4242 4242 4242", 4, "#")
+	fmt.Println(mask) // 4242####################
+
 	// str.Reverse() reverses the string
 	reverse := str.Reverse("Never give up")
 	fmt.Println(reverse) // pu evig reveN

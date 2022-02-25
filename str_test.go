@@ -38,6 +38,15 @@ func TestLength(t *testing.T) {
 	}
 }
 
+func TestLimit(t *testing.T) {
+	got := Limit("Pack my box with five dozen liquor jugs.", 10)
+	want := "Pack my bo"
+
+	if got != want {
+		t.Fatalf("got %q, wanted %q", got, want)
+	}
+}
+
 func TestLower(t *testing.T) {
 	got := Lower("JANUARY")
 	want := "january"
@@ -47,9 +56,9 @@ func TestLower(t *testing.T) {
 	}
 }
 
-func TestLimit(t *testing.T) {
-	got := Limit("Pack my box with five dozen liquor jugs.", 10)
-	want := "Pack my bo"
+func TestMask(t *testing.T) {
+	got := Mask("4242 4242 4242 4242 4242", 4, "#")
+	want := "4242####################"
 
 	if got != want {
 		t.Fatalf("got %q, wanted %q", got, want)
