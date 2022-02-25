@@ -1,13 +1,9 @@
-package str_test
+package str
 
-import (
-	"testing"
-
-	"github.com/matusstafura/str"
-)
+import "testing"
 
 func TestAfter(t *testing.T) {
-	got := str.After("Do not let the behavior of others destroy your inner peace. - Dalai Lama", "- ")
+	got := After("Do not let the behavior of others destroy your inner peace. - Dalai Lama", "- ")
 	want := "Dalai Lama"
 
 	if got != want {
@@ -16,7 +12,7 @@ func TestAfter(t *testing.T) {
 }
 
 func TestAppend(t *testing.T) {
-	got := str.Append("Matus", " Stafura")
+	got := Append("Matus", " Stafura")
 	want := "Matus Stafura"
 
 	if got != want {
@@ -25,7 +21,7 @@ func TestAppend(t *testing.T) {
 }
 
 func TestBefore(t *testing.T) {
-	got := str.Before("Do not let the behavior of others destroy your inner peace. - Dalai Lama", " -")
+	got := Before("Do not let the behavior of others destroy your inner peace. - Dalai Lama", " -")
 	want := "Do not let the behavior of others destroy your inner peace."
 
 	if got != want {
@@ -34,7 +30,7 @@ func TestBefore(t *testing.T) {
 }
 
 func TestLength(t *testing.T) {
-	quote := str.Length("Acta non verba.")
+	quote := Length("Acta non verba.")
 	length := 15
 
 	if quote != length {
@@ -43,7 +39,7 @@ func TestLength(t *testing.T) {
 }
 
 func TestLower(t *testing.T) {
-	got := str.Lower("JANUARY")
+	got := Lower("JANUARY")
 	want := "january"
 
 	if got != want {
@@ -52,7 +48,7 @@ func TestLower(t *testing.T) {
 }
 
 func TestLimit(t *testing.T) {
-	got := str.Limit("Pack my box with five dozen liquor jugs.", 10)
+	got := Limit("Pack my box with five dozen liquor jugs.", 10)
 	want := "Pack my bo"
 
 	if got != want {
@@ -61,7 +57,7 @@ func TestLimit(t *testing.T) {
 }
 
 func TestReverse(t *testing.T) {
-	got := str.Reverse("Never give up")
+	got := Reverse("Never give up")
 	want := "pu evig reveN"
 
 	if got != want {
@@ -70,7 +66,7 @@ func TestReverse(t *testing.T) {
 }
 
 func TestUpper(t *testing.T) {
-	got := str.Upper("Be the friend you wish you had.")
+	got := Upper("Be the friend you wish you had.")
 	want := "BE THE FRIEND YOU WISH YOU HAD."
 
 	if got != want {

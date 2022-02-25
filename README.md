@@ -48,7 +48,7 @@ func main() {
 ## Tests
 
 ```bash
-go test str_test.go -v
+go test ./... -v
 ```
 
 ## Contributions
