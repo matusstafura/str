@@ -23,6 +23,10 @@ func main() {
 	before := str.Before("Do not let the behavior of others destroy your inner peace. - Dalai Lama"," -")
 	fmt.Println(before) // 'Do not let the behavior of others destroy your inner peace.'
 
+	// str.EndsWith() checks if string ends with the given target string
+	endsWith := str.EndsWith("abcdef","ef")
+	fmt.Println(endsWith) // true
+
 	// str.Length() returns lenght of the given string
 	length := str.Length("Acta non verba.")
 	fmt.Println(length) // 15
@@ -42,6 +46,10 @@ func main() {
 	// str.Reverse() reverses the string
 	reverse := str.Reverse("Never give up")
 	fmt.Println(reverse) // pu evig reveN
+
+	// str.StartsWith() checks if string starts with the given target string
+	startsWith := str.startsWith("abcdef","ab")
+	fmt.Println(startsWith) // true
 
 	// str.Upper() converts the string to uppercase
 	upper := str.Upper("Be the friend you wish you had.")

@@ -29,6 +29,15 @@ func TestBefore(t *testing.T) {
 	}
 }
 
+func TestEndsWith(t *testing.T) {
+	got := EndsWith("abcdef", "ef")
+	want := true
+
+	if got != want {
+		t.Fatalf("got %t, wanted %t", got, want)
+	}
+}
+
 func TestLength(t *testing.T) {
 	quote := Length("Acta non verba.")
 	length := 15
@@ -71,6 +80,15 @@ func TestReverse(t *testing.T) {
 
 	if got != want {
 		t.Fatalf("got %q, wanted %q", got, want)
+	}
+}
+
+func TestStartsWith(t *testing.T) {
+	got := StartsWith("abcdef", "ab")
+	want := true
+
+	if got != want {
+		t.Fatalf("got %t, wanted %t", got, want)
 	}
 }
 

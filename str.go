@@ -19,6 +19,15 @@ func Before(s, c string) string {
 	return string(r[0])
 }
 
+func EndsWith(s string, c string) bool {
+	r := len(s) - len(c)
+	if string(s[r:]) == c {
+		return true
+	} 
+	
+	return false
+}
+
 func Mask(s string, n int, r string) string {
 	l := len(s)
 	x := s[n:l]
@@ -49,6 +58,14 @@ func Reverse(s string) string {
 		f[len(s)-1-i] = string(c)
 	}
 	return strings.Join(f, "")
+}
+
+func StartsWith(s string, c string) bool {
+	if string(s[0:len(c)]) == c {
+		return true
+	} 
+	
+	return false
 }
 
 func Upper(s string) string {
