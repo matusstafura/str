@@ -41,6 +41,10 @@ func main() {
 	mask := str.Mask("4242 4242 4242 4242 4242", 4, "#")
 	fmt.Println(mask) // 4242####################
 
+	// str.Repeat() repeats the given string n times
+	repeat := str.Repeat("*", 4)
+	fmt.Println(repeat) // '****'
+
 	// str.Reverse() reverses the string
 	reverse := str.Reverse("Never give up")
 	fmt.Println(reverse) // pu evig reveN
@@ -48,6 +52,10 @@ func main() {
 	// str.StartsWith() checks if string starts with the given target string
 	startsWith := str.startsWith("abcdef","ab")
 	fmt.Println(startsWith) // true
+
+	// str.Title() converts string to Title case
+	title := str.Title("This is a string")
+	fmt.Println(title) // 'This Is A String'
 
 	// str.Upper() converts the string to uppercase
 	upper := str.Upper("Be the friend you wish you had.")

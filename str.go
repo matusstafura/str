@@ -51,6 +51,16 @@ func Lower(s string) string {
 	return strings.ToLower(s)
 }
 
+func Repeat(s string, n int) string {
+	x := ""
+	i := 1
+	for i < 5 {
+		x += s
+		i++
+	}
+	return x
+}
+
 func Reverse(s string) string {
 	f := make([]string, len(s))
 
@@ -66,6 +76,10 @@ func StartsWith(s string, c string) bool {
 	} 
 	
 	return false
+}
+
+func Title(s string) string {
+	return strings.Title(Lower(s))
 }
 
 func Upper(s string) string {

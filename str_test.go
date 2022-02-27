@@ -74,6 +74,15 @@ func TestMask(t *testing.T) {
 	}
 }
 
+func TestRepeat(t *testing.T) {
+	got := Repeat("*", 4)
+	want := "****"
+
+	if got != want {
+		t.Fatalf("got %q, wanted %q", got, want)
+	}
+}
+
 func TestReverse(t *testing.T) {
 	got := Reverse("Never give up")
 	want := "pu evig reveN"
@@ -89,6 +98,15 @@ func TestStartsWith(t *testing.T) {
 
 	if got != want {
 		t.Fatalf("got %t, wanted %t", got, want)
+	}
+}
+
+func TestTitle(t *testing.T) {
+	got := Title("this is a string")
+	want := "This Is A String"
+
+	if got != want {
+		t.Fatalf("got %q, wanted %q", got, want)
 	}
 }
 
