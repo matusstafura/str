@@ -29,6 +29,15 @@ func TestBefore(t *testing.T) {
 	}
 }
 
+func TestBetween(t *testing.T) {
+	got := Between("This is a string", "This", "string")
+	want := " is a "
+
+	if got != want {
+		t.Fatalf("got %q, wanted %q", got, want)
+	}
+}
+
 func TestEndsWith(t *testing.T) {
 	got := EndsWith("abcdef", "ef")
 	want := true
@@ -75,8 +84,8 @@ func TestMask(t *testing.T) {
 }
 
 func TestRepeat(t *testing.T) {
-	got := Repeat("*", 4)
-	want := "****"
+	got := Repeat("*", 7)
+	want := "*******"
 
 	if got != want {
 		t.Fatalf("got %q, wanted %q", got, want)

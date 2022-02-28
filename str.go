@@ -19,6 +19,12 @@ func Before(s, c string) string {
 	return string(r[0])
 }
 
+func Between(s, a, b string) string {
+	re := regexp.MustCompile(`^`+a+`(.*)`+b+`$`)
+	f := re.FindStringSubmatch(s)
+	return f[1]
+}
+
 func EndsWith(s string, c string) bool {
 	r := len(s) - len(c)
 	if string(s[r:]) == c {
@@ -53,8 +59,8 @@ func Lower(s string) string {
 
 func Repeat(s string, n int) string {
 	x := ""
-	i := 1
-	for i < 5 {
+	i := 0
+	for i < n {
 		x += s
 		i++
 	}

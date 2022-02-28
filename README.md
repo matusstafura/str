@@ -23,6 +23,10 @@ func main() {
 	before := str.Before("Do not let the behavior of others destroy your inner peace. - Dalai Lama"," -")
 	fmt.Println(before) // 'Do not let the behavior of others destroy your inner peace.'
 
+	// str.Between() returns string between two given strings
+	between := str.Between("This is a string","This", "string")
+	fmt.Println(between) // ' is a '
+
 	// str.EndsWith() checks if string ends with the given target string
 	endsWith := str.EndsWith("abcdef","ef")
 	fmt.Println(endsWith) // true
