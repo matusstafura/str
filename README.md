@@ -31,6 +31,10 @@ func main() {
 	endsWith := str.EndsWith("abcdef","ef")
 	fmt.Println(endsWith) // true
 
+	// str.Escape() converts 5 characters "&", "<", ">", '"', and "'" to HTML entities.
+	escape := Escape("<h1>Tom & Jerry</h1>")
+	fmt.Println(escape) // '&lt;h1&gt;Tom &amp; Jerry&lt;/h1&gt;'
+
 	// str.Length() returns lenght of the given string
 	length := str.Length("Acta non verba.")
 	fmt.Println(length) // 15

@@ -47,6 +47,15 @@ func TestEndsWith(t *testing.T) {
 	}
 }
 
+func TestEscape(t *testing.T) {
+	got := Escape("<h1>Tom & Jerry</h1>")
+	want := "&lt;h1&gt;Tom &amp; Jerry&lt;/h1&gt;"
+
+	if got != want {
+		t.Fatalf("got %q, wanted %q", got, want)
+	}
+}
+
 func TestLength(t *testing.T) {
 	quote := Length("Acta non verba.")
 	length := 15

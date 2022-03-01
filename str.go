@@ -20,7 +20,7 @@ func Before(s, c string) string {
 }
 
 func Between(s, a, b string) string {
-	re := regexp.MustCompile(`^`+a+`(.*)`+b+`$`)
+	re := regexp.MustCompile(`^` + a + `(.*)` + b + `$`)
 	f := re.FindStringSubmatch(s)
 	return f[1]
 }
@@ -29,9 +29,23 @@ func EndsWith(s string, c string) bool {
 	r := len(s) - len(c)
 	if string(s[r:]) == c {
 		return true
-	} 
-	
+	}
+
 	return false
+}
+
+func Escape(s string) string {
+	m := map[string]string{"<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;"}
+
+	re := regexp.MustCompile(`&`)
+	s = re.ReplaceAllString(s, `&amp;`)
+
+	for i, j := range m {
+		re := regexp.MustCompile(i)
+		s = re.ReplaceAllString(s, j)
+	}
+
+	return s
 }
 
 func Mask(s string, n int, r string) string {
@@ -79,8 +93,8 @@ func Reverse(s string) string {
 func StartsWith(s string, c string) bool {
 	if string(s[0:len(c)]) == c {
 		return true
-	} 
-	
+	}
+
 	return false
 }
 
