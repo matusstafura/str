@@ -41,6 +41,10 @@ func main() {
 	lower := str.Lower("JANUARY")
 	fmt.Println(lower) // january
 
+	// str.LowerFirst() converts only the first char in the string to lowercase
+	lowerFirst := str.LowerFirst("JANUARY")
+	fmt.Println(lowerFirst) // 'jANUARY'
+
 	// str.Limit() truncates the string to the specified length
 	limit := str.Limit("This is a string!", 6)
 	fmt.Println(limit) // This i
@@ -68,6 +72,10 @@ func main() {
 	// str.Upper() converts the string to uppercase
 	upper := str.Upper("Be the friend you wish you had.")
 	fmt.Println(upper) // BE THE FRIEND YOU WISH YOU HAD.
+
+	// str.UpperFirst() converts only the first character in the string to uppercase
+	upperFirst := str.UpperFirst("sverige")
+	fmt.Println(upperFirst) // 'Sverige'
 }
 
 ## Tests

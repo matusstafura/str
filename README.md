@@ -37,19 +37,23 @@ func main() {
 
 	// str.Length() returns lenght of the given string
 	length := str.Length("Acta non verba.")
-	fmt.Println(length) // 15
+	fmt.Println(length) // '15'
 
 	// str.Limit() truncates the string to the specified length
 	limit := str.Limit("This is a string!", 6)
-	fmt.Println(limit) // This i
+	fmt.Println(limit) // 'This i'
 
 	// str.Lower() converts the string to lowercase
 	lower := str.Lower("JANUARY")
-	fmt.Println(lower) // january
+	fmt.Println(lower) // 'january'
+
+	// str.LowerFirst() converts only the first char in the string to lowercase
+	lowerFirst := str.LowerFirst("JANUARY")
+	fmt.Println(lowerFirst) // 'jANUARY'
 
 	// str.Mask() converts the string to lowercase
 	mask := str.Mask("4242 4242 4242 4242 4242", 4, "#")
-	fmt.Println(mask) // 4242####################
+	fmt.Println(mask) // '4242####################'
 
 	// str.Repeat() repeats the given string n times
 	repeat := str.Repeat("*", 4)
@@ -57,7 +61,7 @@ func main() {
 
 	// str.Reverse() reverses the string
 	reverse := str.Reverse("Never give up")
-	fmt.Println(reverse) // pu evig reveN
+	fmt.Println(reverse) // 'pu evig reveN'
 
 	// str.StartsWith() checks if string starts with the given target string
 	startsWith := str.startsWith("abcdef","ab")
@@ -69,7 +73,11 @@ func main() {
 
 	// str.Upper() converts the string to uppercase
 	upper := str.Upper("Be the friend you wish you had.")
-	fmt.Println(upper) // BE THE FRIEND YOU WISH YOU HAD.
+	fmt.Println(upper) // 'BE THE FRIEND YOU WISH YOU HAD.'
+
+	// str.UpperFirst() converts only the first character in the string to uppercase
+	upperFirst := str.UpperFirst("sverige")
+	fmt.Println(upperFirst) // 'Sverige'
 }
 ```
 

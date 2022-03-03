@@ -71,6 +71,10 @@ func Lower(s string) string {
 	return strings.ToLower(s)
 }
 
+func LowerFirst(s string) string {
+	return Lower(string(s[0])) + string(s[1:])
+}
+
 func Repeat(s string, n int) string {
 	x := ""
 	i := 0
@@ -104,4 +108,8 @@ func Title(s string) string {
 
 func Upper(s string) string {
 	return strings.ToUpper(s)
+}
+
+func UpperFirst(s string) string {
+	return Upper(string(s[0])) + string(s[1:])
 }

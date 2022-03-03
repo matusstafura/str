@@ -83,6 +83,15 @@ func TestLower(t *testing.T) {
 	}
 }
 
+func TestLowerFirst(t *testing.T) {
+	got := LowerFirst("JANUARY")
+	want := "jANUARY"
+
+	if got != want {
+		t.Fatalf("got %q, wanted %q", got, want)
+	}
+}
+
 func TestMask(t *testing.T) {
 	got := Mask("4242 4242 4242 4242 4242", 4, "#")
 	want := "4242####################"
@@ -131,6 +140,15 @@ func TestTitle(t *testing.T) {
 func TestUpper(t *testing.T) {
 	got := Upper("Be the friend you wish you had.")
 	want := "BE THE FRIEND YOU WISH YOU HAD."
+
+	if got != want {
+		t.Fatalf("got %q, wanted %q", got, want)
+	}
+}
+
+func TestUpperFirst(t *testing.T) {
+	got := UpperFirst("sverige")
+	want := "Sverige"
 
 	if got != want {
 		t.Fatalf("got %q, wanted %q", got, want)
