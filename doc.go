@@ -57,6 +57,10 @@ func main() {
 	repeat := str.Repeat("*", 4)
 	fmt.Println(repeat) // '****'
 
+	// str.Replace(subject, search, replace string) replaces all the occurences of the given string
+	replace := str.Replace("This is a string. The string is replaced.", "string", "word")
+	fmt.Println(replace) // 'This is a word. The word is replaced.'
+
 	// str.Reverse() reverses the string
 	reverse := str.Reverse("Never give up")
 	fmt.Println(reverse) // pu evig reveN

@@ -110,6 +110,15 @@ func TestRepeat(t *testing.T) {
 	}
 }
 
+func TestReplace(t *testing.T) {
+	got := Replace("This is a string. The string is replaced.", "string", "word")
+	want := "This is a word. The word is replaced."
+
+	if got != want {
+		t.Fatalf("got %q, wanted %q", got, want)
+	}
+}
+
 func TestReverse(t *testing.T) {
 	got := Reverse("Never give up")
 	want := "pu evig reveN"
