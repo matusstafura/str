@@ -55,6 +55,10 @@ func main() {
 	mask := str.Mask("4242 4242 4242 4242 4242", 4, "#")
 	fmt.Println(mask) // '4242####################'
 
+	// str.Remove(string, remove) removes the given string from the string
+	remove := str.Remove("Red hot chili peppers", "e")
+	fmt.Println(remove) // 'Rd hot chili ppprs
+
 	// str.Repeat() repeats the given string n times
 	repeat := str.Repeat("*", 4)
 	fmt.Println(repeat) // '****'

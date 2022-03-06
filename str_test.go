@@ -101,6 +101,15 @@ func TestMask(t *testing.T) {
 	}
 }
 
+func TestRemove(t *testing.T) {
+	got := Remove("Red hot chili peppers", "e")
+	want := "Rd hot chili ppprs"
+
+	if got != want {
+		t.Fatalf("got %q, wanted %q", got, want)
+	}
+}
+
 func TestRepeat(t *testing.T) {
 	got := Repeat("*", 7)
 	want := "*******"

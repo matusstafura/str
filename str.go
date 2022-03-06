@@ -75,6 +75,11 @@ func LowerFirst(s string) string {
 	return Lower(string(s[0])) + string(s[1:])
 }
 
+func Remove(s, c string) string {
+	re := regexp.MustCompile(c)
+	return re.ReplaceAllString(s, "")
+}
+
 func Replace(subject, search, replace string) string {
 	re := regexp.MustCompile(search)
 	return re.ReplaceAllString(subject, replace)
