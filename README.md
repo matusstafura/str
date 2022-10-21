@@ -1,5 +1,8 @@
 # String Helpers for Go Lang
 
+| :point_up: No longer maintained. Please, use https://github.com/matusstafura/ant |
+| -------------------------------------------------------------------------------- |
+
 ## Usage
 
 ```go
